@@ -1,5 +1,6 @@
 const ORDINAL = ['Low', 'Medium', 'High']
 const LEARNING = ['Visual', 'Auditory', 'Kinesthetic', 'Reading/Writing']
+const BASE = import.meta.env.VITE_API_URL ?? ''
 
 const fields = [
   { key: 'StudyHours', label: 'Study Hours / week', type: 'number', min: 0, max: 40, step: 0.5, default: 10 },
@@ -38,7 +39,7 @@ export default function StudentForm({ onResult }) {
     setLoading(true); setError(null)
     try {
       const payload = { ...values }
-      const res = await fetch('api/predict', {
+      const res = await fetch(`${BASE}/predict`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),

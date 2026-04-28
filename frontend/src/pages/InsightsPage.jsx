@@ -4,6 +4,8 @@ import {
   RadarChart, Radar, PolarGrid, PolarAngleAxis, ResponsiveContainer, Legend, Tooltip
 } from 'recharts'
 
+const BASE = import.meta.env.VITE_API_URL ?? ''
+
 const PROFILE_DATA = [
   { metric: 'Study Hours', 0: 65, 1: 40, 2: 55 },
   { metric: 'Attendance', 0: 78, 1: 70, 2: 85 },
@@ -22,7 +24,7 @@ export default function InsightsPage() {
   const [error, setError] = useState(null)
 
   useEffect(() => {
-    fetch('api/clusters')
+    fetch(`${BASE}/clusters`)
       .then(r => { if (!r.ok) throw new Error('Backend unreachable'); return r.json() })
       .then(setClusters)
       .catch(e => setError(e.message))
