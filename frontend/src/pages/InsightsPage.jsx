@@ -15,7 +15,7 @@ const PROFILE_DATA = [
   { metric: 'Wellbeing', 0: 60, 1: 65, 2: 45 },
 ]
 
-const COLORS = ['#2d5a3d', '#c4622d', '#9b5a1a']
+const COLORS = ['#12664A', '#BD8F3C', '#ff0000']
 const LABELS = ['Consistent Avg', 'Last-Minute High', 'Struggling']
 
 export default function InsightsPage() {

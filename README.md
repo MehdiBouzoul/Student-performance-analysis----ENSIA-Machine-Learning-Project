@@ -2,6 +2,28 @@
 # StudentLens — Student Performance ML App
 # Student-performance-analysis----ENSIA-Machine-Learning-Project
 Student performance analysis dashboard based on real students data collected anonymously from National Higher School of Artificial Intelligence (ENSIA) -Algeria
+
+
+## Live Demo
+- Vercel: https://student-performance-analysis-ensia.vercel.app
+
+## Screenshots
+
+### Home
+![Home page](docs/screenshots/home.png)
+
+### Predict
+![Predict page](docs/screenshots/predictor.png)
+
+### Insights
+![Insights page](docs/screenshots/insights.png)
+
+### test
+![test page](docs/screenshots/test_results.png)
+
+### Clusters
+![Clusters page](docs/screenshots/clusters.png)
+
 ## Setup
 
 ### 1. Train the model (once)
